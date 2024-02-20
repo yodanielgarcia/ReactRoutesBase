@@ -26,11 +26,7 @@ const PagesRoutes = () => {
       path: `${Routes.base}${Routes.edit}`,
       element: (
         <ProtectedRoute grant="canUpdateHierarchy">
-          <StateRoute<LocationState<GetHierarchyNodeInformationParameters>>
-            verifyRouterState={['from', 'hierarchy', 'nodeId']}
-          >
             <Edit />
-          </StateRoute>
         </ProtectedRoute>
       ),
     },
